@@ -41,6 +41,8 @@ class SinglyLinkedList {
 		return current;
 	}
 	shift() {
+		// Step 1: store the current head property in a variable
+		// Step 2: Set the head property to be current head's next value
 		if (!this.head) return undefined;
 		var currentHead = this.head;
 		this.head = currentHead.next;
