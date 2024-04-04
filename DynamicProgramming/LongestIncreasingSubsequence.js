@@ -23,3 +23,25 @@ function longestIncreasingSubsequence(arr) {
 // Example usage:
 const arr = [10, 22, 9, 33, 21, 50, 41, 60];
 console.log(longestIncreasingSubsequence(arr)); // Output: 5 (for the sequence [10, 22, 33, 50, 60])
+// function to calculate the nth Fibonacci number using dynamic programming
+
+function fibonacci(n) {
+	// Create an array to store Fibonacci numbers
+	let fib = new Array(n + 1);
+
+	// Base cases
+	fib[0] = 0;
+	fib[1] = 1;
+
+	// Compute Fibonacci numbers from 2 to n
+	for (let i = 2; i <= n; i++) {
+		fib[i] = fib[i - 1] + fib[i - 2];
+	}
+
+	// Return the nth Fibonacci number
+	return fib[n];
+}
+
+// Example usage:
+const n = 10;
+console.log(`The ${n}th Fibonacci number is:`, fibonacci(n)); // Output: 55
